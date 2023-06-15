@@ -75,7 +75,7 @@ class HomePage extends HookWidget {
         ),
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.toys),
             label: 'てげずみ走行会',
           ),
           BottomNavigationBarItem(
