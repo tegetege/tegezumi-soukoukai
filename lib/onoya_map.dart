@@ -11,7 +11,7 @@ class OnoyaMap extends StatelessWidget {
       width: width,
       height: 240,
       initialContent:
-          '<script type="text/javascript" src="https://map.yahoo.co.jp/embedmap/V3/?lon=138.89423&lat=36.72159&zoom=20&cond=action:place;maptype:basic;lon:138.89423;lat:36.72159&width=$width&height=240"></script>',
+          '<script type="text/javascript" src="https://map.yahoo.co.jp/embedmap/V3/?lon=138.89423&lat=36.72159&zoom=16&cond=action:place;maptype:basic;lon:138.89423;lat:36.72159&width=$width&height=240"></script>',
       initialSourceType: SourceType.html,
     );
   }
