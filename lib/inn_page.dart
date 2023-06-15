@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tegezumi/onoya_map.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'gunsai_map.dart';
-
-class TopPage extends StatelessWidget {
-  const TopPage({super.key});
-
+class InnPage extends StatelessWidget {
+  const InnPage({super.key});
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -15,39 +13,32 @@ class TopPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '日程',
+              '宿泊先',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
             const SizedBox(height: 16),
-            const Text('2023年7月1日(土)'),
-            const SizedBox(height: 32),
-            Text(
-              '会場',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-            const SizedBox(height: 16),
-            const Text('群馬サイクルスポーツセンター 多目的広場'),
-            const Text('〒379-1411 群馬県利根郡みなかみ町新巻３８５３−３８５３'),
+            const Text('小野屋 八景苑'),
+            const Text('〒379-1404 群馬県利根郡みなかみ町相俣76'),
             const SizedBox(height: 16),
             Row(
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    _launchUrl('https://goo.gl/maps/kGDrnkS8Mao6iPkD7');
+                    _launchUrl('https://goo.gl/maps/hMQKwBNuwavbJXbS6');
                   },
                   child: const Text('Google Map'),
                 ),
                 const SizedBox(width: 16),
                 ElevatedButton(
                   onPressed: () {
-                    _launchUrl('https://yahoo.jp/k_MReV');
+                    _launchUrl('https://yahoo.jp/43w8tg');
                   },
                   child: const Text('Yahoo!カーナビ'),
                 ),
               ],
             ),
             const SizedBox(height: 16),
-            const GunsaiMap(),
+            const OnoyaMap(),
           ],
         ),
       ),

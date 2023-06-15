@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tegezumi/course_page.dart';
+import 'package:tegezumi/inn_page.dart';
 import 'package:tegezumi/timetable_page.dart';
 import 'package:tegezumi/top_page.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import 'map.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,13 +30,13 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'てげずみ走行会',
-      // theme: ThemeData.light(useMaterial3: true),
       theme: lightTheme.copyWith(
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(lightTheme.textTheme),
       ),
       darkTheme: darkTheme.copyWith(
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(darkTheme.textTheme),
       ),
+      themeMode: ThemeMode.dark,
       home: const HomePage(title: 'てげずみ走行会'),
     );
   }
@@ -62,8 +61,8 @@ class HomePage extends HookWidget {
         children: const [
           TopPage(),
           TimetablePage(),
-          TopPage(),
-          TopPage(),
+          CoursePage(),
+          InnPage(),
         ],
         onPageChanged: (index) => selectedIndex.value = index,
       ),
