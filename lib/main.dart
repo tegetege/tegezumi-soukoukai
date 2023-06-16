@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme.copyWith(
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(darkTheme.textTheme),
       ),
-      themeMode: ThemeMode.dark,
       home: const HomePage(title: 'てげずみ走行会'),
     );
   }
