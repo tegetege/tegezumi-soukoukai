@@ -68,7 +68,7 @@ class Table extends StatelessWidget {
           Time(label: '15:00'),
           Time(label: '16:00'),
           Time(label: '17:00'),
-          Time(label: '18 :00'),
+          Time(label: '18:00'),
         ],
       ),
     );
@@ -120,22 +120,25 @@ class Event extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: height,
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: Theme.of(context).primaryColorLight.withOpacity(0.8),
-      ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Row(children: [
-          Text(time),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Text(label),
-          ),
-        ]),
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          border: Border.all(color: Theme.of(context).colorScheme.primary),
+          borderRadius: BorderRadius.circular(8),
+          color: Theme.of(context).colorScheme.surface,
+        ),
+        child: Align(
+          alignment: Alignment.topLeft,
+          child: Row(children: [
+            Text(time),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Text(label),
+            ),
+          ]),
+        ),
       ),
     );
   }
