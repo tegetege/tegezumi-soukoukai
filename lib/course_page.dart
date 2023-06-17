@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'launch_url_from_string.dart';
 
@@ -7,31 +6,79 @@ class CoursePage extends StatelessWidget {
   const CoursePage({super.key});
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
-          Text(
-            '午前コース',
-            style: Theme.of(context).textTheme.headlineLarge,
+          Course(
+            title: '午前コース',
+            comments: 'トウセコメンツ\n'
+                '・午前コースは基本的にグリップで走る人向けのコース設定。\n'
+                '  -> ラインの自由度を減らして、オンザレールに車をコントロール出来る必要があるようにしています。\n'
+                '・前半セクション(黒線&オレンジ線)は大きなコーナを利用しての荷重移動の練習を狙っています。\n'
+                '・青線セクションは小さなコーナで構成して、ハンドル捌きやターンの練習ができることを目的としています。\n',
+            imagePath: 'images/course_am.jpg',
           ),
-          const SizedBox(height: 16),
-          GestureDetector(
-            onTap: () {
-              launchUrlFromString('');
-            },
-            child: Image.asset('images/course_am.jpg'),
+          Course(
+            title: '午後コース',
+            comments: 'トウセコメンツ\n'
+                '・午後コースは基本的にドリフトで走る人向けのコース設定。\n'
+                '  -> 大きなコーナーで構成して、ラインの自由度を残したコース設定をしてみました。\n'
+                '・横Gがかかる時間が長くなるようにコース作成してみました。\n'
+                '  -> グリップの人からすると疲れちゃうかも?(もう少しバランスとった方が良いかもと思いつつ...)\n',
+            imagePath: 'images/course_pm.jpg',
           ),
-          const SizedBox(height: 32),
-          Text(
-            '午後コース',
-            style: Theme.of(context).textTheme.headlineLarge,
+        ],
+      ),
+    );
+  }
+}
+
+class Course extends StatelessWidget {
+  const Course({
+    super.key,
+    required this.title,
+    required this.comments,
+    required this.imagePath,
+  });
+
+  final String title;
+  final String comments;
+  final String imagePath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.all(16),
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
           ),
-          const SizedBox(height: 16),
-          GestureDetector(
-            onTap: () {},
-            child: Image.asset('images/course_pm.jpg'),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Text(comments),
           ),
-          const SizedBox(height: 16),
+          Stack(
+            children: [
+              Image.asset(imagePath),
+              Positioned.fill(
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {
+                      launchUrlFromString('/assets/$imagePath');
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
