@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tegezumi/course_page.dart';
 import 'package:tegezumi/inn_page.dart';
@@ -7,6 +8,7 @@ import 'package:tegezumi/timetable_page.dart';
 import 'package:tegezumi/top_page.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 

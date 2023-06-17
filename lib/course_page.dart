@@ -72,7 +72,7 @@ class Course extends StatelessWidget {
                   color: Colors.transparent,
                   child: InkWell(
                     onTap: () {
-                      launchUrlFromString('/assets/$imagePath');
+                      launchUrlFromString('./assets/$imagePath');
                     },
                   ),
                 ),
