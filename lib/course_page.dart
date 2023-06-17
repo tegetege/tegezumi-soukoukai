@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'launch_url_from_string.dart';
 
 class CoursePage extends StatelessWidget {
   const CoursePage({super.key});
@@ -12,14 +15,22 @@ class CoursePage extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge,
           ),
           const SizedBox(height: 16),
-          Image.asset('assets/images/course_am.jpg'),
+          GestureDetector(
+            onTap: () {
+              launchUrlFromString('');
+            },
+            child: Image.asset('images/course_am.jpg'),
+          ),
           const SizedBox(height: 32),
           Text(
             '午後コース',
             style: Theme.of(context).textTheme.headlineLarge,
           ),
           const SizedBox(height: 16),
-          Image.asset('assets/images/course_pm.jpg'),
+          GestureDetector(
+            onTap: () {},
+            child: Image.asset('images/course_pm.jpg'),
+          ),
           const SizedBox(height: 16),
         ],
       ),
