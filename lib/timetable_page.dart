@@ -19,13 +19,35 @@ class TimetablePage extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 36, child: Text('1日目')),
-                    Event(height: 36, time: '7:00', label: 'ゲートオープン'),
+                    Event(height: 36, time: '7:00', label: 'ゲートオープン', text: ''),
                     SizedBox(height: 36 * 2),
-                    Event(height: 36, time: '8:30', label: 'ドライバーズミーティング'),
-                    Event(height: 36 * 6, time: '9:00', label: '走行（午前の部）'),
-                    Event(height: 36 * 2, time: '12:00', label: 'お昼休憩'),
-                    Event(height: 36 * 6, time: '13:00', label: '走行（午後の部）'),
-                    Event(height: 36, time: '16:00', label: '走行終了'),
+                    Event(
+                        height: 36,
+                        time: '8:30',
+                        label: 'ドライバーズミーティング',
+                        text: ''),
+                    Event(
+                        height: 36 * 6,
+                        time: '9:00',
+                        label: '走行（午前の部）',
+                        text: ''),
+                    Event(
+                        height: 36 * 2,
+                        time: '12:00',
+                        label: 'お昼休憩',
+                        text: '園内レストラン利用可能'),
+                    Event(
+                        height: 36 * 6,
+                        time: '13:00',
+                        label: '走行（午後の部）',
+                        text: ''),
+                    Event(height: 36, time: '16:00', label: '走行終了', text: ''),
+                    Event(
+                        height: 36, time: '17:00', label: 'ゲートクローズ', text: ''),
+                    Event(
+                        height: 36, time: '17:30', label: '旅館チェックイン', text: ''),
+                    SizedBox(height: 36 * 2),
+                    Event(height: 36, time: '19:00', label: '夕食', text: ''),
                   ],
                 ),
               ),
@@ -35,7 +57,10 @@ class TimetablePage extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 36, child: Text('2日目')),
-                    Event(height: 36, time: '7:00', label: '朝食'),
+                    Event(height: 36, time: '7:30', label: '朝食', text: ''),
+                    SizedBox(height: 36 * 5),
+                    Event(
+                        height: 36, time: '10:00', label: 'チェックアウト', text: ''),
                   ],
                 ),
               ),
@@ -69,6 +94,8 @@ class Table extends StatelessWidget {
           Time(label: '16:00'),
           Time(label: '17:00'),
           Time(label: '18:00'),
+          Time(label: '19:00'),
+          Time(label: '20:00'),
         ],
       ),
     );
@@ -112,11 +139,13 @@ class Event extends StatelessWidget {
     required this.height,
     required this.time,
     required this.label,
+    required this.text,
   });
 
   final double height;
   final String time;
   final String label;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +164,7 @@ class Event extends StatelessWidget {
             Text(time),
             const SizedBox(width: 16),
             Expanded(
-              child: Text(label),
+              child: Text('$label\n$text'),
             ),
           ]),
         ),
