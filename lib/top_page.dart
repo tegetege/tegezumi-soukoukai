@@ -46,11 +46,12 @@ class TopPage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           const GunsaiMap(),
+          const SizedBox(height: 16),
           Text('会場マップ', style: Theme.of(context).textTheme.headlineLarge),
           const SizedBox(height: 16),
           const Text('「野外ステージ」エリアをパドックとして利用します(20~25台程度)'),
           const Text('走行車両優先で利用お願いいたします。'),
-          const Text('見学に来られる方はマップ右上の「駐車場」をご利用ください。'),
+          const Text('見学で来られる方は、マップ右上の「駐車場」の利用協力をお願いいたします。'),
           Image.asset('images/gunsai_park_map.jpg'),
           const Text('https://www.gunsai.jp/facility/'), //TODO:  リンク化する
         ]),
