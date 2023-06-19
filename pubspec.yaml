@@ -72,6 +72,7 @@ flutter:
     - images/course_am.jpg
     - images/course_pm.jpg
     - images/gunsai_park_map.jpg
+    - images/onoya_parking1.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
