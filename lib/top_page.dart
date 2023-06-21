@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -53,7 +54,14 @@ class TopPage extends StatelessWidget {
           const Text('走行車両優先で利用お願いいたします。'),
           const Text('見学で来られる方は、マップ右上の「駐車場」の利用協力をお願いいたします。'),
           Image.asset('images/gunsai_park_map.jpg'),
-          const Text('https://www.gunsai.jp/facility/'), //TODO:  リンク化する
+          RichText(
+            text: TextSpan(
+              style: const TextStyle(color: Colors.blue),
+              text: 'https://www.gunsai.jp/facility/',
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => _launchUrl('https://www.gunsai.jp/facility/'),
+            ),
+          )
         ]),
       ),
     );
