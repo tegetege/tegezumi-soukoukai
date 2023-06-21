@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:tegezumi/launch_url_from_string.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'gunsai_map.dart';
@@ -66,7 +67,30 @@ class TopPage extends StatelessWidget {
               recognizer: TapGestureRecognizer()
                 ..onTap = () => _launchUrl('https://www.gunsai.jp/facility/'),
             ),
-          )
+          ),
+          const SizedBox(height: 16),
+          Text('規約', style: Theme.of(context).textTheme.headlineLarge),
+          const SizedBox(height: 16),
+          const Text('安全で楽しい走行会にするために、皆様に守っていただきたいことが記載されています'),
+          const Text('当日までに、ご確認をよろしくお願いいたします'),
+          const SizedBox(height: 16),
+          Stack(
+            children: [
+              Image.asset('images/tegezumi_kiyaku.jpg'),
+              Positioned.fill(
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {
+                      launchUrlFromString(
+                          './assets/contents/tegezumi_kiyaku.pdf');
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
         ]),
       ),
     );
