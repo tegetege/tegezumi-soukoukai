@@ -1,6 +1,6 @@
 # tegezumi
 
-A new Flutter project.
+てげずみ走行会！
 
 ## Getting Started
 
