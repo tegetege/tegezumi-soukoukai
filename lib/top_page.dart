@@ -27,6 +27,11 @@ class TopPage extends StatelessWidget {
           const Text('群馬サイクルスポーツセンター 多目的広場'),
           const Text('〒379-1411 群馬県利根郡みなかみ町新巻３８５３−３８５３'),
           const SizedBox(height: 16),
+          const Text('オーナー曰く、会場に向かう際の騒音クレームが\nたまにあるそうです。\n会場に向かう際は、十分お気をつけください',
+              style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('ご協力をよろしくお願いいたします',
+              style: TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 16),
           Row(
             children: [
               ElevatedButton(
