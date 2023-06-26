@@ -19,11 +19,12 @@ class TimetablePage extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 36, child: Text('1日目')),
-                    Event(height: 36, time: '7:00', label: 'ゲートオープン', text: ''),
-                    SizedBox(height: 36 * 2),
+                    SizedBox(height: 36 * 1),
+                    Event(height: 36, time: '7:30', label: 'ゲートオープン', text: ''),
+                    SizedBox(height: 36 * 1),
                     Event(
                         height: 36,
-                        time: '8:30',
+                        time: '8:45',
                         label: 'ドライバーズミーティング',
                         text: ''),
                     Event(
@@ -42,13 +43,13 @@ class TimetablePage extends StatelessWidget {
                         label: '走行（午後の部）',
                         text: ''),
                     Event(height: 36, time: '16:00', label: '走行終了', text: ''),
-                    SizedBox(height: 36 * 1),
+                    Event(height: 36, time: '16:30', label: '閉会式', text: ''),
                     Event(
                         height: 36, time: '17:00', label: 'ゲートクローズ', text: ''),
                     Event(
                         height: 36, time: '17:30', label: '旅館チェックイン', text: ''),
                     SizedBox(height: 36 * 2),
-                    Event(height: 36, time: '19:00', label: '夕食', text: ''),
+                    Event(height: 36, time: '19:00', label: '夕食&宴会', text: ''),
                   ],
                 ),
               ),
