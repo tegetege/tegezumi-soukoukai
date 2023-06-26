@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tegezumi/launch_url_from_string.dart';
+import 'package:tegezumi/weather.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'gunsai_map.dart';
@@ -91,6 +92,8 @@ class TopPage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
+          Text('天気情報', style: Theme.of(context).textTheme.headlineLarge),
+          const Weather(),
         ]),
       ),
     );
