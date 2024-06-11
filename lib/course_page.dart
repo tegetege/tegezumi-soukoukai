@@ -15,7 +15,7 @@ class CoursePage extends StatelessWidget {
             // '  -> ラインの自由度を減らして、オンザレールに車をコントロール出来る必要があるようにしています.\n'
             // '・前半セクション(黒線&オレンジ線)は大きなコーナを利用しての荷重移動の練習を狙っています.\n'
             // '・青線セクションは小さなコーナで構成して、ハンドル捌きやターンの練習ができることを目的としています.\n',
-            imagePath: 'images/now_making.png',
+            imagePath: 'images/now_making.jpg',
           ),
           Course(
             title: '午後コース',
@@ -24,7 +24,7 @@ class CoursePage extends StatelessWidget {
             // '  -> 大きなコーナーで構成して、ラインの自由度を残したコース設定をしてみました.\n'
             // '・横Gがかかる時間が長くなるようにコース作成してみました.\n'
             // '  -> グリップ走行組からすると疲れちゃうかも?(もう少しバランスとった方が良いかもと思いつつ...)\n',
-            imagePath: 'images/now_making.png',
+            imagePath: 'images/now_making.jpg',
           ),
         ],
       ),

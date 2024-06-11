@@ -76,6 +76,7 @@ flutter:
     - images/onoya_parking2.jpg
     - images/tegezumi_kiyaku.jpg
     - contents/tegezumi_kiyaku.pdf
+    - images/now_making.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
