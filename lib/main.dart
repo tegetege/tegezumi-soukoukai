@@ -31,14 +31,14 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'てげずみ走行会',
+      title: 'てげずみ 七夕走',
       theme: lightTheme.copyWith(
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(lightTheme.textTheme),
       ),
       darkTheme: darkTheme.copyWith(
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(darkTheme.textTheme),
       ),
-      home: const HomePage(title: 'てげずみ走行会'),
+      home: const HomePage(title: 'てげずみ 七夕走'),
     );
   }
 }
@@ -55,7 +55,7 @@ class HomePage extends HookWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('てげずみ走行会'),
+        title: const Text('てげずみ 七夕走'),
       ),
       body: PageView(
         controller: pageViewController,
@@ -77,7 +77,7 @@ class HomePage extends HookWidget {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.toys),
-            label: 'てげずみ走行会',
+            label: '走行会概要',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.timer),

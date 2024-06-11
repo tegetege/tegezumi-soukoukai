@@ -20,7 +20,7 @@ class TopPage extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge,
           ),
           const SizedBox(height: 16),
-          const Text('2023年7月1日(土)'),
+          const Text('2024年7月6日(土)'),
           const SizedBox(height: 32),
           Text(
             '会場アクセス',
@@ -59,7 +59,7 @@ class TopPage extends StatelessWidget {
           const SizedBox(height: 16),
           const Text('「野外ステージ」エリアをパドックとして利用します(20~25台程度)'),
           const Text('走行車両優先で利用お願いいたします。'),
-          const Text('見学で来られる方は、マップ右上の「駐車場」の利用協力をお願いいたします。'),
+          const Text('見学で来られる方は、マップ右上の「駐車場("野外ステージでは無い方")」の利用協力をお願いいたします。'),
           Image.asset('images/gunsai_park_map.jpg'),
           RichText(
             text: TextSpan(
