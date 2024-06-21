@@ -48,8 +48,12 @@ class TimetablePage extends StatelessWidget {
                         height: 36, time: '17:00', label: 'ゲートクローズ', text: ''),
                     Event(
                         height: 36, time: '17:30', label: '旅館チェックイン', text: ''),
-                    SizedBox(height: 36 * 2),
-                    Event(height: 36, time: '19:00', label: '夕食&宴会', text: ''),
+                    SizedBox(height: 36 * 1),
+                    Event(
+                        height: 36 * 2,
+                        time: '18:30',
+                        label: '夕食&宴会',
+                        text: ''),
                   ],
                 ),
               ),
