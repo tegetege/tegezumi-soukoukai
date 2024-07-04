@@ -10,21 +10,19 @@ class CoursePage extends StatelessWidget {
       child: Column(
         children: [
           Course(
-            title: '午前コース', comments: '作成中...\n',
-            // '・午前コースはグリップで走ることを想定して作成しました.\n'
-            // '  -> ラインの自由度を減らして、オンザレールに車をコントロール出来る必要があるようにしています.\n'
-            // '・前半セクション(黒線&オレンジ線)は大きなコーナを利用しての荷重移動の練習を狙っています.\n'
-            // '・青線セクションは小さなコーナで構成して、ハンドル捌きやターンの練習ができることを目的としています.\n',
-            imagePath: 'images/now_making.jpg',
+            title: '午前コース',
+            comments: '',
+            imagePath: 'images/course_am.png',
           ),
           Course(
             title: '午後コース',
-            comments: '作成中...\n',
-            // '・午後コースはドリフトで走ることも想定して作成してみました.\n'
-            // '  -> 大きなコーナーで構成して、ラインの自由度を残したコース設定をしてみました.\n'
-            // '・横Gがかかる時間が長くなるようにコース作成してみました.\n'
-            // '  -> グリップ走行組からすると疲れちゃうかも?(もう少しバランスとった方が良いかもと思いつつ...)\n',
-            imagePath: 'images/now_making.jpg',
+            comments: '',
+            imagePath: 'images/course_pm.png',
+          ),
+          Course(
+            title: '新入生用コース',
+            comments: '',
+            imagePath: 'images/course_beginner.png',
           ),
         ],
       ),
